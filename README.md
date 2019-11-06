@@ -1,6 +1,6 @@
 # 2019 最全的前端开发面试题
 
-##说说你对闭包的理解
+## 说说你对闭包的理解
 
 使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。
 
@@ -21,13 +21,13 @@ cookie的最大大约为4096字节，为了兼容性，一般不能超过4095字
 
 IE 提供了一种存储可以持久化用户数据，叫做userdata，从IE5.0就开始支持。每个数据最多128K，每个域名下最多1M。这个持久化数据放在缓存中，如果缓存没有清理，那么会一直存在。
 
-###优点：极高的扩展性和可用性
+### 优点：极高的扩展性和可用性
 
 1.通过良好的编程，控制保存在cookie中的session对象的大小。
 2.通过加密和安全传输技术（SSL），减少cookie被破解的可能性。
 3.只在cookie中存放不敏感数据，即使被盗也不会有重大损失。
 4.控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。
-###缺点：
+### 缺点：
 
 1.`Cookie`数量和长度的限制。每个domain最多只能有20条cookie，每个cookie长度不能超过4KB，否则会被截掉。
 
@@ -43,7 +43,7 @@ sessionStorage用于本地存储一个会话（session）中的数据，这些�
 
 而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
 
-###web storage和cookie的区别
+### web storage和cookie的区别
 
 Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。
 
@@ -55,7 +55,7 @@ Web Storage的概念和cookie相似，区别是它是为了更大容量存储设
 
 localStorage和sessionStorage都具有相同的操作方法，例如setItem、getItem和removeItem等
 
-###cookie 和session 的区别：
+### cookie 和session 的区别：
 
  1、cookie数据存放在客户的浏览器上，session数据放在服务器上。
  2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗
@@ -67,13 +67,13 @@ localStorage和sessionStorage都具有相同的操作方法，例如setItem、ge
     将登陆信息等重要信息存放为SESSION
     其他信息如果需要保留，可以放在COOKIE中
 CSS 相关问题
-###display:none和visibility:hidden的区别？
+### display:none和visibility:hidden的区别？
 
 display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，
 就当他从来不存在。
 
 visibility:hidden  隐藏对应的元素，但是在文档布局中仍保留原来的空间。
-###CSS中 link 和@import 的区别是？
+### CSS中 link 和@import 的区别是？
 
 (1) link属于HTML标签，而@import是CSS提供的; 
 (2) 页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;
@@ -172,7 +172,7 @@ html部分
 2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
 3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
 4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。
-###Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?
+### Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?
 
 （1）、<!DOCTYPE> 声明位于文档中的最前面，处于 <html> 标签之前。告知浏览器以何种模式来渲染文档。 
 
@@ -181,7 +181,7 @@ html部分
 （3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。
 
 （4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。   
-###你知道多少种Doctype文档类型？
+### 你知道多少种Doctype文档类型？
 
  该标签可声明三种 DTD 类型，分别表示严格版本、过渡版本以及基于框架的 HTML 文档。
  HTML 4.01 规定了三种文档类型：Strict、Transitional 以及 Frameset。
@@ -245,7 +245,7 @@ L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
 ie和ff都存在，相邻的两个div的margin-left和margin-right不会重合，但是margin-top和margin-bottom却会发生重合。
 解决方法，养成良好的代码编写习惯，同时采用margin-top或者同时采用margin-bottom。
 * ie6对png图片格式支持不好(引用一段脚本处理)
-###解释下浮动和它的工作原理？清除浮动的技巧
+### 解释下浮动和它的工作原理？清除浮动的技巧
 
 浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。
 
